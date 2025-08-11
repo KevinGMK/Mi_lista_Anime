@@ -1,0 +1,438 @@
+/* ==========================
+   Paleta y variables neon
+   ========================== */
+:root {
+  --cyan-neon: #00fff7;
+  --magenta-neon: #ff00ff;
+  --pink-neon: #ff66cc;
+  --yellow-neon: #fff500;
+  --blue-dark: #05011a;
+  --purple-dark: #150034;
+  --black-glass: rgba(10, 10, 10, 0.85);
+  --dark-bg: #121212;
+  --dark-bg-alt: #1a1a1a;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'MiFuenteNeon';
+  src: url('./font/Cyber_Brush.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ==========================
+   Fondo y tipografías
+   ========================== */
+body {
+  background: linear-gradient(135deg, var(--blue-dark), var(--purple-dark));
+  color: var(--cyan-neon);
+  font-family: 'MiFuenteNeon';
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1.5rem;
+}
+
+/* ==========================
+   Header / Título
+   ========================== */
+h1 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: var(--cyan-neon);
+  text-align: center;
+  margin-bottom: 1rem;
+  text-shadow:
+    0 0 10px var(--cyan-neon),
+    0 0 20px var(--cyan-neon),
+    0 0 30px var(--magenta-neon),
+    0 0 40px var(--magenta-neon);
+  user-select: none;
+  letter-spacing: 2px;
+}
+
+/* ==========================
+   Barra de búsqueda
+   ========================== */
+#busqueda {
+  max-width: 350px;
+  width: 100%;
+  background: transparent;
+  border: 2px solid var(--cyan-neon);
+  border-radius: 30px;
+  padding: 0.5rem 1.2rem;
+  color: var(--cyan-neon);
+  font-size: 1rem;
+  font-weight: 600;
+  outline: none;
+  box-shadow:
+    0 0 10px var(--cyan-neon),
+    inset 0 0 8px var(--cyan-neon);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  user-select: text;
+}
+#busqueda::placeholder { color: #0ff9ffaa; }
+#busqueda:focus {
+  border-color: var(--magenta-neon);
+  box-shadow:
+    0 0 15px var(--magenta-neon),
+    inset 0 0 12px var(--magenta-neon);
+}
+
+/* ==========================
+   Barra de filtros
+   ========================== */
+.menu-filtros {
+  background: var(--black-glass);
+  padding: 0.8rem 1rem;
+  border-radius: 15px;
+  box-shadow:
+    0 0 15px var(--cyan-neon),
+    inset 0 0 25px var(--cyan-neon);
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.menu-filtros button {
+  background: transparent;
+  border: 2px solid var(--cyan-neon);
+  color: var(--cyan-neon);
+  padding: 0.5rem 1.2rem;
+  border-radius: 30px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 0 10px var(--cyan-neon);
+  transition: all .35s ease;
+}
+.menu-filtros button:hover {
+  background-color: var(--magenta-neon);
+  color: #111;
+  box-shadow: 0 0 25px var(--magenta-neon), 0 0 40px var(--pink-neon);
+}
+.menu-filtros button.active {
+  background-color: var(--magenta-neon);
+  color: #111;
+  border-color: var(--pink-neon);
+  box-shadow: 0 0 35px var(--pink-neon), 0 0 60px var(--magenta-neon);
+}
+/* filtro icon */
+.filter-icon { color: var(--cyan-neon); cursor:pointer; }
+.filter-icon:hover { color: var(--magenta-neon); }
+
+/* Dropdown */
+.dropdown-menu {
+  background-color: var(--dark-bg-alt);
+  color: var(--cyan-neon);
+  border-radius: 12px;
+  box-shadow: 0 0 15px var(--cyan-neon), inset 0 0 10px var(--cyan-neon);
+  padding: 1rem;
+  max-height: 220px;
+  overflow-y: auto;
+}
+.dropdown-menu label { display:block; margin-bottom:.4rem; font-weight:600; }
+.dropdown-menu input[type="radio"], .dropdown-menu input[type="checkbox"] { accent-color: var(--cyan-neon); }
+
+/* ==========================
+   Contador (3 Animes en total)
+   ========================== */
+#contador-texto {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--pink-neon);
+  text-align: center;
+  margin: 1.5rem 0;
+  user-select: none;
+  text-shadow:
+    0 0 8px var(--pink-neon),
+    0 0 15px var(--magenta-neon),
+    0 0 25px var(--pink-neon),
+    0 0 35px var(--magenta-neon);
+  letter-spacing: 2px;
+  transition: color .4s, text-shadow .4s;
+  padding: 10px 20px;
+  border: 2px solid var(--pink-neon);
+  border-radius: 15px;
+  background: rgba(255, 20, 147, 0.06);
+  display: inline-block;
+  min-width: 280px;
+  animation: neonGlow 2.5s ease-in-out infinite;
+}
+@keyframes neonGlow {
+  0%,100% {
+    text-shadow:
+      0 0 8px var(--pink-neon),
+      0 0 15px var(--magenta-neon),
+      0 0 25px var(--pink-neon),
+      0 0 35px var(--magenta-neon);
+  }
+  50% {
+    text-shadow:
+      0 0 12px var(--pink-neon),
+      0 0 20px var(--magenta-neon),
+      0 0 30px var(--pink-neon),
+      0 0 40px var(--magenta-neon);
+  }
+}
+
+/* ==========================
+   Lista / Tarjetas
+   ========================== */
+#anime-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.1rem;
+  padding: 0.5rem;
+}
+
+.anime-card {
+  background: var(--black-glass);
+  border: 2px solid var(--cyan-neon);
+  border-radius: 12px;
+  box-shadow: 0 0 15px 3px var(--cyan-neon), inset 0 0 15px 1px var(--cyan-neon);
+  color: var(--cyan-neon);
+  cursor: pointer;
+  transition: transform .28s ease, box-shadow .45s ease;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0%;
+  min-width: 140px;
+  max-width: 220px;
+  align-items: center;
+  margin: 10px;
+  padding: 0.8rem;
+  user-select: none;
+  filter: drop-shadow(0 0 6px var(--cyan-neon));
+  will-change: transform, box-shadow;
+}
+.anime-card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px 5px var(--magenta-neon), inset 0 0 25px 3px var(--pink-neon);
+}
+.anime-card img {
+  width: 100%;
+  border-radius: 8px;
+  border: 3px solid var(--cyan-neon);
+  box-shadow: 0 0 20px 2px var(--cyan-neon);
+  aspect-ratio: 2/3;
+  object-fit: cover;
+  margin-bottom: .6rem;
+}
+.anime-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 0 0 10px var(--cyan-neon), 0 0 20px var(--cyan-neon);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+/* ==========================
+   Modal (estilo neon)
+   ========================== */
+
+/* Backdrop */
+.modal-backdrop.show {
+  background: rgba(10, 10, 18, 0.92);
+  backdrop-filter: blur(8px);
+}
+
+/* Override Bootstrap modal content */
+.modal-content {
+  position: relative;
+  overflow: hidden;
+  background: rgba(18, 18, 18, 0.85);
+  border: 2px solid var(--cyan-neon);
+  border-radius: 16px;
+  box-shadow:
+    0 0 20px 4px var(--cyan-neon),
+    inset 0 0 15px 3px var(--cyan-neon);
+  color: var(--cyan-neon);
+  font-family: 'Orbitron', sans-serif;
+  padding: 1.5rem;
+  user-select: none;
+  transition: box-shadow 0.4s ease;
+  z-index: 10;
+}
+
+.modal-content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--gif-fondo, none);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5; /* La opacidad que te gustó */
+  filter: brightness(0.7) blur(1px);
+  z-index: 1;
+  pointer-events: none;
+  border-radius: 16px;
+  animation: glowPulse 6s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100% { filter: brightness(0.7) blur(1px); }
+  50% { filter: brightness(1) blur(1px); }
+}
+.modal-content > * {
+  position: relative;
+  z-index: 5;
+}
+
+/* Header */
+.modal-header {
+  display: flex !important;
+  justify-content: center !important;
+  font-size: 2.2rem !important; /* más grande */
+  font-weight: 900;
+  color: var(--pink-neon);
+  text-shadow:
+    0 0 8px var(--pink-neon),
+    0 0 20px var(--magenta-neon);
+  border-bottom: 2px solid var(--pink-neon);
+  user-select: none;
+}
+
+.modal-header > .btn-close {
+  position: absolute;
+  right: 1.2rem;
+  top: 1rem;
+  filter: drop-shadow(0 0 5px var(--pink-neon));
+  transition: filter 0.3s ease;
+}
+.modal-header > .btn-close:hover {
+  filter: drop-shadow(0 0 10px var(--magenta-neon));
+}
+
+
+/* Close button glow */
+.btn-close.btn-close-white {
+  filter: drop-shadow(0 0 6px var(--pink-neon));
+}
+.btn-close.btn-close-white:hover {
+  filter: drop-shadow(0 0 12px var(--magenta-neon));
+}
+
+/* Forzar layout columna: imagen arriba, texto abajo EN TODAS LAS RESOLUCIONES */
+.modal-body {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center;
+  gap: 1rem;
+  padding-top: .5rem;
+}
+
+/* Imagen grande y centrada */
+#modal-anime-img {
+  width: 100%;
+  max-width: 520px; /* puedes ajustar */
+  height: auto;
+  border-radius: 12px;
+  border: 3px solid var(--cyan-neon);
+  box-shadow: 0 0 35px 6px var(--cyan-neon);
+  object-fit: cover;
+}
+
+/* Info debajo, centrada */
+.modal-body .modal-info {
+  width: 100%;
+  text-align: center;
+  color: var(--cyan-neon);
+}
+.modal-body .modal-info h3 {
+  margin-top: 0;
+  margin-bottom: .6rem;
+  color: var(--pink-neon);
+  text-shadow: 0 0 10px var(--pink-neon), 0 0 18px var(--magenta-neon);
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+.modal-body .modal-info p {
+  margin: .35rem 0;
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+/* Links */
+.modal-body .modal-info a#modal-url {
+  color: var(--cyan-neon);
+  text-decoration: underline;
+}
+.modal-body .modal-info a#modal-url:hover {
+  color: var(--pink-neon);
+}
+
+/* ---------- Forzar imagen arriba dentro del modal (override Bootstrap .row/.col) ---------- */
+.modal-body .row {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center;
+  gap: 1rem;
+  margin: 0;               /* evita márgenes de bootstrap */
+}
+
+/* Hacer que las columnas ocupen 100% del ancho del modal (una debajo de la otra) */
+.modal-body .row > [class*="col-"] {
+  flex: 0 0 100% !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+/* Asegurar que la imagen esté centrada y tenga tamaño grande en escritorio */
+.modal-body .row .col-md-4,
+.modal-body .row .col-4 {
+  display: flex;
+  justify-content: center;
+}
+
+/* Texto (info) abajo centrado */
+.modal-body .row .col-md-8,
+.modal-body .row .col-8 {
+  text-align: center;
+}
+
+/* ==========================
+   Responsive tweaks
+   ========================== */
+
+/* En pantallas muy pequeñas mantenemos misma estructura (imagen arriba) y reducimos tamaños */
+@media (max-width: 576px) {
+  h1 { font-size: 1.8rem; }
+  #contador-texto { font-size: 1.3rem; min-width: 170px; padding: 8px 14px; }
+  .anime-card { min-width: 46%; max-width: 48%; flex: 1 1 46%; margin: .4rem; }
+  .anime-title { font-size: 1rem; }
+  #modal-anime-img { max-width: 320px; }
+  .modal-body .modal-info h3 { font-size: 1.2rem; }
+  .modal-body .modal-info p { font-size: 0.98rem; }
+}
+
+/* En pantallas medianas */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .anime-card { flex: 1 1 28%; max-width: 220px; }
+  #modal-anime-img { max-width: 460px; }
+  .modal-body .modal-info h3 { font-size: 1.4rem; }
+}
+
+/* En escritorio amplio */
+@media (min-width: 1200px) {
+  .anime-card { flex: 1 1 22%; max-width: 240px; }
+  #modal-anime-img { max-width: 520px; }
+  .modal-body .modal-info h3 { font-size: 1.8rem; }
+  .modal-content { max-width: 820px; margin: 0 auto; }
+}

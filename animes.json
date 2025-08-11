@@ -1,0 +1,34 @@
+[
+  {
+    "titulo": "Sakamoto Days",
+    "cantidad_episodios": "por definir",
+    "estado": "Viendo",
+    "plataforma": "Legion Anime XS (App movil)",
+    "inicio": "11 de enero de 2025",
+    "finalizado": "en emision",
+    "url": "https://www3.animeflv.net/anime/sakamoto-days",
+    "destacado": true,
+    "imagen_portada": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2T8o6LNGT9bxFZ6SAQbc5wdW33JLGWMTMVA&s",
+    "imagen_modal": "https://i.blogs.es/0c9a56/sakamoto-days_3/840_560.jpeg",
+    "fondo_gif": "https://giffiles.alphacoders.com/223/223323.gif",
+    "creador": "Eiichirō Oda",
+    "temporada": "2",
+    "pelicula": "No tiene"
+  },
+  {
+    "titulo": "One Piece",
+    "cantidad_episodios": 1139,
+    "estado": "Viendo",
+    "plataforma": "Legion Anime XS (App movil)",
+    "inicio": "22 de julio de 1997",
+    "finalizado": "en emision",
+    "url": "https://www3.animeflv.net/anime/one-piece-tv",
+    "destacado": true,
+    "imagen_portada": "https://external-preview.redd.it/the-latest-batch-of-egghead-dubs-one-piece-season-15-voyage-v0-kfTnmeYacG9Kc5_RoYMCW3GkiKWd5HLHcC57YI9NPZQ.jpg?width=640&crop=smart&auto=webp&s=6d87f16caedaceccbab635f6a791769de1673130",
+    "imagen_modal": "https://elcomercio.pe/resizer/v2/BPMG4FDHCFGT5F3GLT3ZNUIEZ4.PNG?auth=257d4fb0fcfd6e89995bc8f9656a92d71e131465a8d83c6a074ee84aac1e8ddf&width=1073&height=566&quality=75&smart=true",
+    "fondo_gif": "https://giffiles.alphacoders.com/220/220282.gif",
+    "creador": "Eiichirō Oda",
+    "temporada": "1",
+    "pelicula": "15"
+  }
+]
