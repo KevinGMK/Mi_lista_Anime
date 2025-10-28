@@ -589,10 +589,10 @@
     "imagen_modal": "https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2025/01/spy-x-family-4279567.jpg?tf=3840x",
     "fondo_gif": "https://img.wattpad.com/story_parts/1298441252/images/1733be30785b7201140176982479.gif",
     "creador": "Tatsuya Endō",
-    "temporada": "2",
+    "temporada": "3",
     "pelicula": "1",
     "categoria": "Comedia, espionaje",
-    "estado": "Completado"
+    "estado": "Viendo"
   },
   {
     "titulo": "Uglymug, Epicfighter",
@@ -609,7 +609,7 @@
     "temporada": "1",
     "pelicula": "No tiene",
     "categoria": "Aventuras, fantasía, isekai",
-    "estado": "Viendo"
+    "estado": "Completado"
   },
   {
     "titulo": "Clevatess",
@@ -626,7 +626,7 @@
     "temporada": "1",
     "pelicula": "No tiene",
     "categoria": "Acción, drama, aventura y fantasía",
-    "estado": "Viendo"
+    "estado": "Completado"
   },
   {
     "titulo": "Tate no Yuusha no Nariagari",
@@ -663,4 +663,5 @@
     "estado": "Completado"
   }
 ]
+
 
